@@ -1,37 +1,12 @@
-## Welcome to GitHub Pages
+Semantic Segmentation
+1. Use ImageJ to run Macro to convert raw images to RGB images if they are not already
+Need raw NADH intensity images as well as ground truth labels of cell area
+2. Run Image_Segmentation_Train to train model - Dependent on HelperFunctions
+3. Run Apply_CNN to use trained model to create masks for a group of images
+4. Run Object_Recognition to perform watershed and segment individual cells
 
-You can use the [editor on GitHub](https://github.com/ktweed488/NADH-Intensity-Segmentation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ktweed488/NADH-Intensity-Segmentation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Image Classification
+1. Use ImageJ to run Macro to convert raw images to RGB images if they are not already
+2. Run imresizeFunction to convert images to needed 224x224 size
+3. Run Image_Classifier to train multiclass SVM to deliniate cell types, Code at bottom of this script allows for batch classification of images
